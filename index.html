@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doge Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <canvas id="game">
+    
+  </canvas>
+  <div class="controller">
+    <button id="left">Kiri</button>
+    <button id="right">Kanan</button>
+  </div>
+  
+  <div class="score">
+    <h1 id="score">2</h1>
+  </div>
+  
+  <div class="preloader">
+    <div class="main">
+      <img src="https://c.tenor.com/sTFc7j1xRJ0AAAAM/doge-dancing-doge.gif">
+      <h1>Doge Adventure</h1>
+      <p>Bantu doge menghindari pentungan</p>
+      <button id="start">Play</button>
+    </div>
+  </div>
+  
+  <div class="gameover">
+    <img src="asset/mengsedih.png">
+    <h2>Game Over</h2>
+    <p>Awikwok Mengsedih </p>
+    <h1 id="finalscore">0</h1>
+    <button onclick="window.location.reload()">Ulang</button>
+  </div>
+  
+  
+  <script src="main.js" type="module" charset="utf-8"></script>
+
+</body>
+</html>
