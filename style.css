@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@keyframes bg {
+  0%{
+    background-position: top;
+  }
+  50% {
+    background-position: bottom;
+  }
+  100%{
+    background-position: top;
+  }
+}
+
+body {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiuAk99sci9iJMx1ZCcBA7JPyt63k3w2K_vQ&usqp=CAU);
+  animation: bg 2000ms infinite;
+}
+
+canvas {
+  width: 300px;
+  /*height: 600px;*/
+  background-color: transparent;
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.controller button {
+  width: 140px;
+  padding: 10px 20px;
+  box-sizing: none;
+  border: none;
+  background: transparent;
+  margin-top: 20px;
+  color: white;
+  border: 2px solid white;
+  transition: ease-out .3s;
+}
+
+.controller button.active {
+  background-color: white;
+  color: black;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+.main button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  margin-top: 40px;
+  transition: ease-out .1s;
+}
+
+.main button:hover {
+  transform: translateY(-10px);
+  background-color: white;
+  color: black;
+}
+
+.score {
+  top: 15%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-15%, -50%);
+}
+
+.score h1 {
+  font-size: 42px;
+  opacity: 0.7;
+  text-align: center;
+  color: white;
+}
+
+.gameover {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  color: white;
+}
+
+.gameover img {
+  width: 200px;
+}
+
+.gameover h1 {
+  padding: 20px 0;
+}
+
+.gameover button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+}
